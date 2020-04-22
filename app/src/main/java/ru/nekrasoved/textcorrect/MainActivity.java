@@ -288,7 +288,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
 
-            int countDel = (data.size()*(100 - N))/100;
+            int countDel = (data.size()*N)/100;
             for (int i = 0; i < countDel; i++){
                 sortSentence[i][0] = 0;
                 sortSentence[i][1] = 0;
