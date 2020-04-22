@@ -4,43 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#C45EA3E6">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Сожми свой текст до неузнаваемости"
-        android:textSize="20dp"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.117" />
 
     <Button
         android:id="@+id/btSubmit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="49dp"
         android:text="Сжать текст"
+        android:background="@drawable/button_style"
+
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.75" />
+        app:layout_constraintVertical_bias="0.96" />
 
     <EditText
         android:id="@+id/etInputText"
-        android:layout_width="239dp"
-        android:layout_height="288dp"
+        android:layout_width="350dp"
+        android:layout_height="500dp"
+        android:background="@drawable/edit_text_style"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
         android:hint="Введите текст"
-        android:backgroundTint="@android:color/transparent"
+        android:textColorHint="#2A030303"
+
         android:padding="8dp"
 
 
@@ -48,23 +40,25 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.35" />
+        app:layout_constraintVertical_bias="0.15" />
 
     <EditText
         android:id="@+id/etProc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="44dp"
         android:ems="10"
-        android:inputType="number"
-        android:hint="Процент сжатия"
-        android:maxLength="2"
         android:gravity="center"
+        android:hint="Процент сжатия"
+        android:inputType="number"
+        android:maxLength="2"
+        android:textColorHint="#2A030303"
+        android:background="@drawable/edit_text_style"
 
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.66" />
+        app:layout_constraintVertical_bias="0.83" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
