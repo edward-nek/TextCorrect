@@ -12,6 +12,7 @@ import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 import android.widget.Toolbar;
 
 import java.util.ArrayList;
@@ -68,14 +69,21 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 try {
                     inpText = etInputText.getText().toString();
-                    Text refer = new Text(inpText);
-                    refer.correctText(Integer.valueOf(etProc.getText().toString()));
-                    outText = refer.getText();
+                    String check = etProc.getText().toString();
+                    if ((check.length() > 0)&&(inpText.length() > 0)){
+                        Text refer = new Text(inpText);
+                        refer.correctText(Integer.valueOf(etProc.getText().toString()));
+                        outText = refer.getText();
 
-                    Intent intent = new Intent(MainActivity.this, TextActivity.class);
-                    startActivity(intent);
-                    overridePendingTransition(0, 0);
-                    finish();
+                        Intent intent = new Intent(MainActivity.this, TextActivity.class);
+                        startActivity(intent);
+                        overridePendingTransition(0, 0);
+                        finish();
+                    }
+                    else{
+                        Toast.makeText(MainActivity.this, "Для начала заполните поля!", Toast.LENGTH_LONG).show();
+                    }
+
                 }catch (Exception e){
 
                 }
